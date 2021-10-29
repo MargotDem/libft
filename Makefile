@@ -4,10 +4,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_strdup.c ft_putnbr.c ft_atoi.c ft_strcat.c ft_strncat.c \
-	ft_isalpha.c ft_isdigit.c
+	ft_isalpha.c ft_isdigit.c ft_isalnum.c
 OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strdup.o ft_putnbr.o ft_atoi.o ft_strcat.o ft_strncat.o \
-	ft_isalpha.o ft_isdigit.o
+	ft_isalpha.o ft_isdigit.o ft_isalnum.o
 
 all: $(NAME)
 
