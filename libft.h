@@ -12,5 +12,6 @@ void	ft_putnbr(int n);
 int		ft_atoi(const char *str);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
+int		ft_isalpha(int c);
 
 #endif
