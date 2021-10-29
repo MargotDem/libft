@@ -7,5 +7,6 @@ char	*ft_strdup(char *src);
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_putnbr(int n);
+int		ft_atoi(const char *str);
 
 #endif
