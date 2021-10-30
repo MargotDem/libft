@@ -15,11 +15,11 @@
 
 # include "string.h"
 
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
-char	*ft_strdup(char *src);
+size_t	ft_strlen(const char *str);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strdup(const char *s1);
 void	ft_putchar(char c);
-void	ft_putstr(char *str);
+void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
 int		ft_atoi(const char *str);
 char	*ft_strcat(char *s1, const char *s2);
@@ -34,5 +34,6 @@ int		ft_strncmp(char *s1, char *s2, size_t n);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+char	*ft_strchr(const char *s, int c);
 
 #endif

@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 17:33:55 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/10/29 17:33:58 by mde-maul         ###   ########.fr       */
+/*   Created: 2021/10/30 15:50:32 by mde-maul          #+#    #+#             */
+/*   Updated: 2021/10/30 15:50:35 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
+	int	len;
 
 	i = 0;
-	while (str[i])
+	len = ft_strlen(s);
+	while (i <= len)
 	{
+		if (s[i] == c)
+			return (&s[i]);
 		i++;
 	}
-	return (i);
+	return (NULL);
 }
