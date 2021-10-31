@@ -6,7 +6,7 @@
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 17:36:20 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/10/29 17:36:32 by mde-maul         ###   ########.fr       */
+/*   Updated: 2021/10/31 13:09:22 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(char *s, int c);
+int		ft_isascii(int c);
 
 #endif
