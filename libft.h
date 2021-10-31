@@ -37,5 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 int		ft_isascii(int c);
+char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
