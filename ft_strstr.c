@@ -14,7 +14,7 @@
 
 int	is_match(const char *haystack, const char *needle, int i)
 {
-	int	sj;
+	int	j;
 
 	j = 0;
 	if (ft_strlen(needle) > ft_strlen(&haystack[i]))
