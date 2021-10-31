@@ -35,6 +35,7 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
 int		ft_isascii(int c);
 
 #endif
