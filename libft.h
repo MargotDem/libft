@@ -40,6 +40,9 @@ int		ft_isascii(int c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
+// bonus
+char	*ft_itoa(int n);
+
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
 
