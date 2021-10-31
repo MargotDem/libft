@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_ismatch.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/31 14:03:32 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/10/31 14:03:35 by mde-maul         ###   ########.fr       */
+/*   Created: 2021/10/31 20:51:29 by mde-maul          #+#    #+#             */
+/*   Updated: 2021/10/31 20:51:33 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int	ft_ismatch(const char *haystack, const char *needle, int i)
 {
-	int	i;
+	int	j;
 
-	i = 0;
-	if (ft_strlen(needle) == 0)
-		return ((char *)haystack);
-	while (haystack[i])
+	j = 0;
+	if (ft_strlen(needle) > ft_strlen(&haystack[i]))
+		return (0);
+	while (needle[j])
 	{
-		if (haystack[i] == needle[0])
-			if (ft_ismatch(haystack, needle, i))
-				return ((char *)&haystack[i]);
-		i++;
+		if (haystack[i + j] != needle[j])
+			return (0);
+		j++;
 	}
-	return (NULL);
+	return (1);
 }
