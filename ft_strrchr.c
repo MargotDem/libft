@@ -12,8 +12,7 @@
 
 #include "libft.h"
 
-//SHOULD BE CONST CHAR *S
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	int		len;
@@ -25,7 +24,7 @@ char	*ft_strrchr(char *s, int c)
 	while (i <= len)
 	{
 		if (s[i] == c)
-			occurrence = &s[i];
+			occurrence = (char *)&s[i];
 		i++;
 	}
 	return (occurrence);
