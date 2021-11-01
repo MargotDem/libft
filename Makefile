@@ -9,7 +9,7 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_strncpy.c ft_strlcat.c ft_strchr.c ft_isascii.c \
 	ft_strrchr.c ft_strstr.c ft_ismatch.c ft_strnstr.c \
 	ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-	ft_putendl.c ft_putnbr_main.c ft_putnbr_fd.c
+	ft_putendl.c ft_putnbr_main.c ft_putnbr_fd.c ft_memalloc.c
 OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strdup.o ft_putnbr.o ft_atoi.o ft_strcat.o ft_strncat.o \
 	ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isprint.o \
@@ -17,7 +17,7 @@ OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strncpy.o ft_strlcat.o ft_strchr.o ft_isascii.o \
 	ft_strrchr.o ft_strstr.o ft_ismatch.o ft_strnstr.o \
 	ft_itoa.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o \
-	ft_putendl.o ft_putnbr_main.o ft_putnbr_fd.o
+	ft_putendl.o ft_putnbr_main.o ft_putnbr_fd.o ft_memalloc.o
 
 all: $(NAME)
 
