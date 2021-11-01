@@ -43,6 +43,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 // bonus
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
 
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
