@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 17:34:45 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/10/29 17:34:48 by mde-maul         ###   ########.fr       */
+/*   Created: 2021/11/01 10:44:36 by mde-maul          #+#    #+#             */
+/*   Updated: 2021/11/01 10:44:39 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putnbr_main(n, 1);
+	ft_putnbr_main(n, fd);
 }

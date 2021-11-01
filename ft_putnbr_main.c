@@ -1,18 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 17:34:45 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/10/29 17:34:48 by mde-maul         ###   ########.fr       */
+/*   Created: 2021/11/01 10:57:01 by mde-maul          #+#    #+#             */
+/*   Updated: 2021/11/01 10:57:04 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putnbr(int n)
+void	ft_putnbr_main(int n, int where)
 {
-	ft_putnbr_main(n, 1);
+	char	c;
+
+	if (n < 0)
+	{
+		if (n == -2147483648)
+		{
+			write(where, "-2", 2);
+			ft_putnbr_main(147483648, where);
+		}
+		else
+		{
+			write(where, "-", 1);
+			ft_putnbr_main(-n, where);
+		}
+	}
+	else
+	{
+		if (n > 9)
+		{
+			ft_putnbr_main(n / 10, where);
+		}
+		c = n % 10 + '0';
+		write(where, &c, 1);
+	}
 }
