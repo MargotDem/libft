@@ -50,6 +50,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
 
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
