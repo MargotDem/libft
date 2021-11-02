@@ -61,6 +61,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
+int		ft_strsplit_delimit_array(char **array, int substr_nb);
 
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
