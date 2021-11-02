@@ -36,6 +36,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_isascii(int c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 // bonus
 void	ft_putchar(char c);

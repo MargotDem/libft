@@ -13,7 +13,8 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
 	ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
 	ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-	ft_strtrim.c ft_strsplit.c ft_strsplit_delimit_array.c
+	ft_strtrim.c ft_strsplit.c ft_strsplit_delimit_array.c \
+	ft_memset.c
 OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strdup.o ft_putnbr.o ft_atoi.o ft_strcat.o ft_strncat.o \
 	ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isprint.o \
@@ -25,7 +26,8 @@ OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
 	ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o \
 	ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o \
-	ft_strtrim.o ft_strsplit.o ft_strsplit_delimit_array.o
+	ft_strtrim.o ft_strsplit.o ft_strsplit_delimit_array.o \
+	ft_memset.o
 
 all: $(NAME)
 
