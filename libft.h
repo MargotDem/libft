@@ -15,6 +15,12 @@
 
 # include "string.h"
 
+typedef struct s_list {
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}	t_list;
+
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *s1);
@@ -74,5 +80,8 @@ int		ft_strsplit_delimit_array(char **array, int substr_nb);
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
 void	ft_putnbr_main(int n, int where);
+
+// super bonus
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif
