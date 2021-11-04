@@ -15,7 +15,8 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
 	ft_strtrim.c ft_strsplit.c ft_strsplit_delimit_array.c \
 	ft_memset.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
-	ft_bzero.c ft_memchr.c ft_memcmp.c ft_lstnew.c
+	ft_bzero.c ft_memchr.c ft_memcmp.c ft_lstnew.c \
+	ft_lstdelone.c ft_lstdel.c
 OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strdup.o ft_putnbr.o ft_atoi.o ft_strcat.o ft_strncat.o \
 	ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isprint.o \
@@ -29,7 +30,8 @@ OBJECTFILES = ft_strlen.o ft_putchar.o ft_putstr.o ft_strcmp.o \
 	ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o \
 	ft_strtrim.o ft_strsplit.o ft_strsplit_delimit_array.o \
 	ft_memset.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
-	ft_bzero.o ft_memchr.o ft_memcmp.o ft_lstnew.o
+	ft_bzero.o ft_memchr.o ft_memcmp.o ft_lstnew.o \
+	ft_lstdelone.o ft_lstdel.o
 
 all: $(NAME)
 
