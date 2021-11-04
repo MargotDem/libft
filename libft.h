@@ -80,8 +80,11 @@ int		ft_strsplit_delimit_array(char **array, int substr_nb);
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
 void	ft_putnbr_main(int n, int where);
+void	ft_display_list(t_list *list);
 
 // super bonus
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void    ft_lstadd(t_list **alst, t_list *new);
+
 
 #endif
