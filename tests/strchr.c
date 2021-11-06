@@ -11,3 +11,13 @@ int	main(void)
 	printf("and this is the returned string: %s", ft_strchr(s1, c1));
 	printf("\nthis is the result zith the real strchr: %s\n", strchr(s1, c1));
 }
+
+/*
+found this on stack overflow this is n e a t:
+char *strchr(const char *s, int c){
+    while (*s != (char)c)
+        if (!*s++)
+            return 0;
+    return (char *)s;
+}
+*/

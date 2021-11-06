@@ -12,9 +12,9 @@ int main(void)
     t_list  *new_el2;
     t_list  *new_el3;
 
-    new_el1 = ft_lstnew("heyyyy", 20);
-    new_el2 = ft_lstnew("waaiitt", 30);
-    new_el3 = ft_lstnew("i got a new complainttt", 45);
+    new_el1 = ft_lstnew("abc", 20);
+    new_el2 = ft_lstnew("def", 20);
+    new_el3 = ft_lstnew("heyhey", 20);
     ft_lstadd(&new_el3, new_el2);
     ft_lstadd(&new_el2, new_el1);
     ft_lstiter(new_el1, &display_list_el);

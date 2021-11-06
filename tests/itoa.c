@@ -3,6 +3,6 @@
 
 int	main(void)
 {
-	int i = -5123;
+	int i = 0;
 	printf("this is i: %i, and now the string: %s", i, ft_itoa(i));
 }

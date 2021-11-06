@@ -48,6 +48,8 @@ char	*ft_itoa(int n)
 	int		size;
 	char	*str;
 
+	if (n == 0)
+		return ("0");
 	if (n < 0)
 	{
 		negative = 1;

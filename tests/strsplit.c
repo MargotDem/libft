@@ -3,7 +3,6 @@
 
 int	main(void)
 {
-	//char	*string = "what the actual fuck****so it works with two or more substrings*but not one or zero";
 	char	*string = "*hey*afewfwe";
 	char	c = '*';
 	char	**array;

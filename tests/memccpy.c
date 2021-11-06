@@ -23,17 +23,4 @@ int	main(void)
 	str3 = (char *)ft_memccpy((void *)str2, (void *)str1, 'c', 5);
 	printf("this is str2 after ft_memcpy %s\n", str2);
 	printf("this is str3 after ft_memcpy %s\n", str3);
-
-	/*
-	int a = 45;
-	int b;
-	int	*ptr_b;
-	int	*ptr_a;
-	ptr_b = &b;
-	ptr_a = &a;
-	printf("this is int a: %i, and int b: %i\n", *ptr_a, *ptr_b);
-	ptr_b = (int *)ft_memccpy((void *)ptr_b, (void *)ptr_a, 4);
-	printf("this is b after ft_memcpy %i\n", *ptr_b);
-
-	*/
 }

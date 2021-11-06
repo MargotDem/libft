@@ -20,7 +20,5 @@ int	main(void)
 56hh
   46747kfg
 
-you know what ill copy paste my test file from the basecamp
-
 
 */
