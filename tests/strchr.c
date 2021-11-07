@@ -40,6 +40,11 @@ int	main(void)
 	char	*c6 = "d";
 	print_test_descr("null string, char", c6);
 	print_test_rslt_str("does not segfault", ft_strchr(s6, *c6), 1);
+
+	char	s7[7] = "";
+	char	*c7 = "d";
+	print_test_descr("(empty string), char: ", c7);
+	print_test_rslt_str(strchr(s7, *c7), ft_strchr(s7, *c7), strchr(s7, *c7) == ft_strchr(s7, *c7));
 }
 
 /*
