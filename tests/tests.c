@@ -6,6 +6,11 @@ void	print_test_descr(char *description, char *str)
 	printf("	TEST: %s: '%s'", description, str);
 }
 
+void	print_test_descr_plus(char *description, char *str)
+{
+	printf("\n	%s: %s", description, str);
+}
+
 void	print_test_rslt_str(char *expected, char *result, int diff)
 {
 	printf("\n\n	  %s", expected);
