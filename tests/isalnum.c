@@ -9,7 +9,7 @@ int	main(void)
 	print_test_descr("character", c1);
 	print_test_rslt_int(isalnum(*c1), ft_isalnum(*c1), isalnum(*c1) == ft_isalnum(*c1));
 
-	char	*c2 = "\\0";
+	char	*c2 = "\0";
 	print_test_descr("character", "\\0");
 	print_test_rslt_int(isalnum(*c2), ft_isalnum(*c2), isalnum(*c2) == ft_isalnum(*c2));
 

@@ -9,7 +9,7 @@ int	main(void)
 	print_test_descr("character", c1);
 	print_test_rslt_int(isdigit(*c1), ft_isdigit(*c1), isdigit(*c1) == ft_isdigit(*c1));
 
-	char	*c2 = "\\0";
+	char	*c2 = "\0";
 	print_test_descr("character", "\\0");
 	print_test_rslt_int(isdigit(*c2), ft_isdigit(*c2), isdigit(*c2) == ft_isdigit(*c2));
 
