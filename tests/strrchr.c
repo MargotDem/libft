@@ -1,20 +1,42 @@
 #include <string.h>
 #include "../libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int	main(void)
 {
-	char	s1[10] = "abcdebkbl";
-	char	c1 = 'b';
+	char	s1[6] = "1b3b5";
+	char	*c1 = "b";
+	char	*desc1 = ft_strjoin("string: ", s1);
+	print_test_descr(ft_strjoin(desc1, ", char: "), c1);
+	print_test_rslt_str(strrchr(s1, *c1), ft_strrchr(s1, *c1), strrchr(s1, *c1) == ft_strrchr(s1, *c1));
 
-	char	s2[5] = "abcd";
-	char	c2 = '\0';
+	char	s2[5] = "ab8d";
+	char	*c2 = "8";
+	char	*desc2 = ft_strjoin("string: ", s2);
+	print_test_descr(ft_strjoin(desc2, ", char: "), c2);
+	print_test_rslt_str(strrchr(s2, *c2), ft_strrchr(s2, *c2), strrchr(s2, *c2) == ft_strrchr(s2, *c2));
 
-	printf("\n");
+	char	s3[4] = "abc";
+	char	*c3 = "\0";
+	char	*desc3 = ft_strjoin("string: ", s3);
+	print_test_descr(ft_strjoin(desc3, ", char: "), "\\0");
+	print_test_rslt_str(strrchr(s3, *c3), ft_strrchr(s3, *c3), strrchr(s3, *c3) == ft_strrchr(s3, *c3));
 
-	printf("s1 is: %s, c1 is: %c, and the result of ft_strrchr(s1, c1): %s\n", s1, c1, ft_strrchr(s1, c1));
-	printf("and this is the result with the real strchr: %s\n\n", strrchr(s1, c1));
+	char	s4[4] = "abc";
+	char	*c4 = "d";
+	char	*desc4 = ft_strjoin("string: ", s4);
+	print_test_descr(ft_strjoin(desc4, ", char: "), c4);
+	print_test_rslt_str(strrchr(s4, *c4), ft_strrchr(s4, *c4), strrchr(s4, *c4) == ft_strrchr(s4, *c4));
 
-	printf("s2 is: %s, c2 is: '\\0', and the result of ft_strrchr(s2, c2): %p\n", s2, ft_strrchr(s2, c2));
-	printf("and this is the result with the real strchr: %p\n\n", strrchr(s2, c2));
+	char	*s6;
+	s6 = NULL;
+	char	*c6 = "d";
+	print_test_descr("null string, char", c6);
+	print_test_rslt_str("no segfault", ft_strrchr(s6, *c6), 1);
+
+	char	s7[7] = "";
+	char	*c7 = "d";
+	print_test_descr("(empty string), char: ", c7);
+	print_test_rslt_str(strrchr(s7, *c7), ft_strrchr(s7, *c7), strrchr(s7, *c7) == ft_strrchr(s7, *c7));
 }

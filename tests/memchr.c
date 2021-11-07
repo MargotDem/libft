@@ -12,7 +12,7 @@ int	main(void)
 	print_test_descr(ft_strjoin(desc1, ", char: "), &c1);
 	print_test_descr_plus("n", ft_itoa(n1));
 	print_test_rslt_str(memchr(s1, c1, n1), ft_memchr(s1, c1, n1), memchr(s1, c1, n1) == ft_memchr(s1, c1, n1));
-	
+
 	char	s2[5] = "ab8d";
 	int		n2 = 5;
 	char	c2 = '8';

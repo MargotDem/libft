@@ -18,12 +18,14 @@ char	*ft_strrchr(const char *s, int c)
 	int		len;
 	char	*occurrence;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	occurrence = NULL;
 	while (i <= len)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			occurrence = (char *)&s[i];
 		i++;
 	}
