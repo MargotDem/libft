@@ -8,5 +8,5 @@ echo "\n\n************	content of test file	************\n\n\n"
 cat ./tests/$1".c"
 echo "\n\n\n************	"$file tests"	************\n\n\n"
 ./a.out
-echo "\n\n\n"
+echo "\n"
 gcc -Wall -Wextra -Werror ./tests/$1".c" ./tests/tests.c -L. -lft
