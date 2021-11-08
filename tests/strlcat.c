@@ -1,6 +1,7 @@
-//#include <string.h>
+#include <string.h>
 #include "../libft.h"
 #include <stdio.h>
+#include "tests.h"
 
 int	main(void)
 {
