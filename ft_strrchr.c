@@ -18,8 +18,6 @@ char	*ft_strrchr(const char *s, int c)
 	int		len;
 	char	*occurrence;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	occurrence = NULL;

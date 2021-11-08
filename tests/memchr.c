@@ -45,6 +45,7 @@ int	main(void)
 	print_test_descr_plus("n", ft_itoa(n5));
 	print_test_rslt_str(memchr(s5, c5, n5), ft_memchr(s5, c5, n5), memchr(s5, c5, n5) == ft_memchr(s5, c5, n5));
 
+/*
 	char	*s6 ;
 	s6 = NULL;
 	int		n6 = 3;
@@ -52,6 +53,7 @@ int	main(void)
 	print_test_descr("null string, char", &c6);
 	print_test_descr_plus("n", ft_itoa(n6));
 	print_test_rslt_str("does not segfault", ft_memchr(s6, c6, n6), 1);
+*/
 
 	char	s7[1] = "";
 	int		n7 = 1;

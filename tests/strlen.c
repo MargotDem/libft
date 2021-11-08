@@ -16,8 +16,9 @@ int	main(void)
 	print_test_descr("a longer string", str3);
 	print_test_rslt_int(strlen(str3), ft_strlen(str3), strlen(str3) == ft_strlen(str3));
 
+/*
 	char	*str4 = NULL;
 	print_test_descr("NULL input", str4);
 	print_test_rslt_str("no segfault", ft_itoa(ft_strlen(str4)), 1);
+*/
 }
-

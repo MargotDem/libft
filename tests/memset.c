@@ -18,6 +18,7 @@ int	main(void)
 	str1[9] = '\0';
 	print_test_rslt_str(returned_str1, returned_str1_ft, ft_strcmp(returned_str1_ft, returned_str1) == 0);
 
+	/*
 	char	*str2_ft = NULL;
 	char	*c2 = "v";
 	int		n2 = 1;
@@ -29,6 +30,7 @@ int	main(void)
 	//char	*str2 = NULL;
 	//char	*returned_str2 = memset((void *)str2, *c2, n2);
 	//(void)returned_str2;
+	*/
 
 	char	str3_ft[1];
 	char	str3[1];

@@ -35,11 +35,13 @@ int	main(void)
 	print_test_descr(ft_strjoin(desc5, ", char: "), c5);
 	print_test_rslt_str(strchr(s5, *c5), ft_strchr(s5, *c5), strchr(s5, *c5) == ft_strchr(s5, *c5));
 
+/*
 	char	*s6;
 	s6 = NULL;
 	char	*c6 = "d";
 	print_test_descr("null string, char", c6);
 	print_test_rslt_str("does not segfault", ft_strchr(s6, *c6), 1);
+*/
 
 	char	s7[7] = "";
 	char	*c7 = "d";
