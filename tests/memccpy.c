@@ -1,26 +1,37 @@
-//#include <string.h>
+#include <string.h>
 #include "../libft.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "tests.h"
 
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
-	char	*str3;
+	// string "abc", char 'c'
+	char	*src1 = "abc";
+	char	dst1_ft[4];
+	char	dst1[4];
+	size_t		n1 = 4;
+	char	c1 = 'd';
+	print_test_descr("src string", src1);
+	ft_memccpy(dst1_ft, src1, c1, n1);
+	memccpy(dst1, src1, c1, n1);
+	print_test_rslt_str(dst1, dst1_ft, ft_strcmp(dst1, dst1_ft) == 0);
 
-	str1 = (char *)malloc(6 * sizeof(char));
-	str2 = (char *)malloc(6 * sizeof(char));
-
-	str1[0] = 'a';
-	str1[1] = 'b';
-	str1[2] = 'c';
-	str1[3] = 'd';
-	str1[4] = 'e';
-	str1[5] = '\0';
-
-	printf("this is str1: %s, and str2: %s\n", str1, str2);
-	str3 = (char *)ft_memccpy((void *)str2, (void *)str1, 'c', 5);
-	printf("this is str2 after ft_memcpy %s\n", str2);
-	printf("this is str3 after ft_memcpy %s\n", str3);
+	// string "abcd efgh", char 'e'
+	char	*src2 = "abcd efgh";
+	char	dst2_ft[10];
+	char	dst2[10];
+	size_t	n2 = 10;
+	char	c2 = 'e';
+	int j = 0;
+	while (j < 10)
+	{
+		dst2[j] = '\0';
+		dst2_ft[j] = '\0';
+		j++;
+	}
+	print_test_descr("src string", src2);
+	ft_memccpy(dst2_ft, src2, c2, n2);
+	memccpy(dst2, src2, c2, n2);
+	print_test_rslt_str(dst2, dst2_ft, ft_strcmp(dst2, dst2_ft) == 0);
 }
