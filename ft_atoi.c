@@ -18,7 +18,7 @@ static int	is_whitespace(char c)
 	return (0);
 }
 
-int	trim_whitespace(const char *str)
+static int	trim_whitespace(const char *str)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ int	trim_whitespace(const char *str)
 	return (i);
 }
 
-int	is_num(char c)
+static int	is_num(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
