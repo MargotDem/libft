@@ -15,6 +15,6 @@ int	main(void)
 	printf("this is the malloced string: %s\n", str);
 	printf("this is the pointer: %p\n", str);
 	ft_memdel((void **)&str);
-	printf("this is not the malloced string anymore as hopefull the freeing works: %s\n", str);
+	printf("this is not the malloced string anymore after memdel: %s\n", str);
 	printf("this is the pointer now: %p\n", str);
 }
