@@ -9,13 +9,7 @@ void	funktion(unsigned int i, char *c)
 
 int	main(void)
 {
-	//void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-	char	str[4];
-
-	str[0] = 'a';
-	str[1] = 'b';
-	str[2] = 'c';
-	str[3] = '\0';
+	char	str[4] = "abc";
 
 	printf("this is the string: %s\n", str);
 	ft_striteri(str, &funktion);
