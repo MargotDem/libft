@@ -18,6 +18,4 @@ int	main(void)
 	}
 	write(1, "and now str is: \n", 17);
 	write(1, str, ft_strlen(str));
-
-
 }

@@ -21,11 +21,10 @@ char	*ft_strnew(size_t size)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < size)
+	while (i <= size)
 	{
 		str[i] = '\0';
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }
