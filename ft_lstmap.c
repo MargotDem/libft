@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static void	del(void *ptr, size_t n)
 {
@@ -25,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new_list_start;
 
 	if (!f || !lst)
-		return ;
+		return (NULL);
 	new_list = f(ft_lstnew(lst->content, lst->content_size));
 	if (!new_list)
 		return (NULL);
