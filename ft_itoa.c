@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	get_size(int n, int negative)
+static int	get_size(int n, int negative)
 {
 	int		size;
 
@@ -28,14 +28,21 @@ int	get_size(int n, int negative)
 	return (size);
 }
 
-void	make_string(char *str, int size, int n)
+static int	get_abs_value(int n)
+{
+	if (n >= 0)
+		return (n);
+	return (-n);
+}
+
+static void	make_string(char *str, int size, int n)
 {
 	int		i;
 
 	i = 0;
 	while (i < size)
 	{
-		str[size - i - 1] = (n % 10) + '0';
+		str[size - i - 1] = get_abs_value(n % 10) + '0';
 		n = n / 10;
 		i++;
 	}
@@ -48,16 +55,12 @@ char	*ft_itoa(int n)
 	int		size;
 	char	*str;
 
-	if (n == 0)
-		return ("0");
+	negative = 0;
 	if (n < 0)
-	{
 		negative = 1;
-		n = -n;
-	}
-	else
-		negative = 0;
 	size = get_size(n, negative);
+	if (n == 0)
+		size = 1;
 	str = (char *)malloc((size + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

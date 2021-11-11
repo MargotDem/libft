@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	get_substr_nb(char const *s, char c)
+static int	get_substr_nb(char const *s, char c)
 {
 	int	i;
 	int	word_count;
@@ -41,7 +41,7 @@ int	get_substr_nb(char const *s, char c)
 	return (word_count);
 }
 
-int	get_substr_len(char const *s, char c, int index)
+static int	get_substr_len(char const *s, char c, int index)
 {
 	int	substr_len;
 
@@ -51,7 +51,7 @@ int	get_substr_len(char const *s, char c, int index)
 	return (substr_len);
 }
 
-int	make_substr(char const *s, char c, char **array, int *int_array)
+static int	make_substr(char const *s, char c, char **array, int *int_array)
 {
 	int		j;
 	int		substr_len;
@@ -77,7 +77,7 @@ int	make_substr(char const *s, char c, char **array, int *int_array)
 	return (index);
 }
 
-int	fill_array(char const *s, char c, char **array)
+static int	fill_array(char const *s, char c, char **array)
 {
 	int		i;
 	int		substr_nb;
