@@ -20,7 +20,7 @@ static int	is_whitespace(char c)
 	return (0);
 }
 
-int	get_whitespace_start(const char *s)
+static int	get_whitespace_start(const char *s)
 {
 	int	whitespaces;
 
@@ -32,7 +32,7 @@ int	get_whitespace_start(const char *s)
 	return (whitespaces);
 }
 
-int	get_whitespace_end(const char *s, int len)
+static int	get_whitespace_end(const char *s, int len)
 {
 	int	whitespaces;
 
@@ -54,7 +54,9 @@ char	*ft_strtrim(char const *s)
 
 	len = ft_strlen(s);
 	whitespace_start = get_whitespace_start(s);
-	whitespace_end = get_whitespace_end(s, len);
+	whitespace_end = 0;
+	if (whitespace_start < len)
+		whitespace_end = get_whitespace_end(s, len);
 	str = (char *)malloc((len + 1 - whitespace_start - whitespace_end) \
 		* sizeof(char));
 	if (!str)
