@@ -1,8 +1,10 @@
 #include "../libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void	del(void *ptr, size_t n)
 {
+	(void)n;
 	free(ptr);
 }
 
@@ -15,5 +17,5 @@ int	main(void)
 	printf("here is the new list elements content: %s\n", new->content);
 	printf("now lets delete it \n");
 	ft_lstdelone(&new, &del);
-	printf("this should segfault right: %s\n", new->content);
+	printf("this should segfault: %s\n", new->content);
 }
