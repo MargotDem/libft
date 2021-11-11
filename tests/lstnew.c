@@ -7,5 +7,5 @@ int	main(void)
 	t_list	*new;
 
 	new = ft_lstnew((void *)str, 10);
-	printf("here is the new list elements content: %s\n", new->content);
+	printf("here is the new list element's content: %s\n", new->content);
 }

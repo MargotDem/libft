@@ -23,7 +23,11 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		return (NULL);
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
+	{
+
+		free(ptr);
 		return (NULL);
+	}
 	if (!content)
 	{
 		new->content = NULL;
