@@ -12,7 +12,6 @@
 
 #include "libft.h"
 #include <stdlib.h>
-//instructions dont specify what to do with malloc is unsuccessful
 
 char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 {
