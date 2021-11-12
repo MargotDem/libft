@@ -99,8 +99,7 @@ static int	fill_array(char const *s, char c, char **array)
 		else
 			i++;
 	}
-	if (!ft_strsplit_delimit_array(array, substr_nb))
-		return (0);
+	array[substr_nb] = NULL;
 	return (1);
 }
 
@@ -109,6 +108,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		substr_nb;
 	char	**array;
 
+	if (!s)
+		return (NULL);
 	substr_nb = get_substr_nb(s, c);
 	array = (char **)malloc((substr_nb + 1) * sizeof(char *));
 	if (!array)
