@@ -17,7 +17,7 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_memset.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_bzero.c ft_memchr.c ft_memcmp.c ft_lstnew.c \
 	ft_lstadd.c ft_display_list.c ft_lstiter.c ft_lstmap.c \
-	ft_lstdelone.c ft_lstdel.c ft_split.c ft_free_str_array.c \
+	ft_lstdelone.c ft_lstdel.c ft_free_str_array.c \
 	ft_list_push_front.c ft_list_push_back.c
 
 O_FILES = $(FILES:.c=.o)
