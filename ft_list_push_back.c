@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 13:22:58 by mde-maul          #+#    #+#             */
-/*   Updated: 2021/11/04 13:23:00 by mde-maul         ###   ########.fr       */
+/*   Created: 2021/11/25 14:19:03 by mde-maul          #+#    #+#             */
+/*   Updated: 2021/11/25 14:19:07 by mde-maul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_list_push_back(t_list *list, t_list *new)
 {
-	if (!alst || !(*alst) || !new)
+	if (!list || !new)
 		return ;
-	ft_list_push_front(alst, new);
+	while (list->next)
+		list = list->next;
+	list->next = new;
 }
