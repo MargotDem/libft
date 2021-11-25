@@ -84,7 +84,7 @@ int	main(void)
 
 	printf("\n\n");
 
-	char	*s7 = "***hello*another string*and another one";
+	char	*s7 = "***hello*another string*and another one*yooo*abc";
 	char	**ar7;
 	print_test_descr("string", s7);
 	ar7 = ft_strsplit(s7, c);
@@ -92,6 +92,5 @@ int	main(void)
 		return (0);
 	printf("\n\n");
 	print_array(ar7);
-
 	printf("\n\n");
 }

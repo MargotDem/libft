@@ -82,6 +82,7 @@ char	**ft_strsplit(char const *s, char c);
 int		ft_ismatch(const char *haystack, const char *needle, int i);
 void	ft_putnbr_main(int n, int where);
 void	ft_display_list(t_list *list);
+void	ft_free_str_array(char **array, int len);
 
 // super bonus
 t_list	*ft_lstnew(void const *content, size_t content_size);

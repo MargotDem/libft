@@ -63,7 +63,10 @@ static int	make_substr(char const *s, char c, char **array, int *int_array)
 	substr_len = get_substr_len(s, c, index);
 	substr = (char *)malloc((substr_len + 1) * sizeof(char));
 	if (!substr)
+	{
+		ft_free_str_array(array, substr_nb - 1);
 		return (0);
+	}
 	j = 0;
 	while (j < substr_len)
 	{
@@ -114,6 +117,9 @@ char	**ft_strsplit(char const *s, char c)
 	if (!array)
 		return (NULL);
 	if (!fill_array(s, c, array))
+	{
+		free(array);
 		return (NULL);
+	}
 	return (array);
 }
