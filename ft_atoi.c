@@ -12,25 +12,6 @@
 
 #include "libft.h"
 
-static int	trim_whitespace(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (ft_iswhitespace(str[i]))
-	{
-		i++;
-	}
-	return (i);
-}
-
-static int	is_num(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -40,12 +21,14 @@ int	ft_atoi(const char *str)
 	result = 0;
 	sign = 1;
 	i = trim_whitespace(str);
+	while (ft_iswhitespace(str[i]))
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		sign = 1 - (str[i] == '-') * 2;
 		i++;
 	}
-	while (str[i] && is_num(str[i]))
+	while (str[i] && ft_isdigit(str[i]))
 	{
 		result = result * 10 + str[i] - '0';
 		i++;
