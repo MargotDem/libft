@@ -88,7 +88,6 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
 // own funktions
 int		ft_ismatch(const char *haystack, const char *needle, int i);
-void	ft_putnbr_main(int n, int where);
 void	ft_display_list_str(t_list *list);
 void	ft_free_str_array(char **array, int len);
 void	ft_list_push_front(t_list **list, t_list *new);
