@@ -10,20 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	is_whitespace(char c)
-{
-	if (c == ' ' || c == '\n' || c == '\t' \
-		|| c == '\v' || c == '\r' || c == '\f')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 static int	trim_whitespace(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (is_whitespace(str[i]))
+	while (ft_iswhitespace(str[i]))
 	{
 		i++;
 	}
