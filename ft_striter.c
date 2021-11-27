@@ -17,6 +17,8 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	i;
 	int	len;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	len = ft_strlen(s);
 	while (i < len)
