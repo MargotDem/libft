@@ -20,8 +20,8 @@ int main(void)
     ft_lstadd(&new_el3, new_el2);
     ft_lstadd(&new_el2, new_el1);
 	printf("This is the list before deleting it:\n");
-    ft_display_list(new_el1);
+    ft_display_list_str(new_el1);
 	ft_lstdel(&new_el1, &del);
 	printf("This is the list after deleting it:\n");
-	ft_display_list(new_el1);
+	ft_display_list_str(new_el1);
 }
