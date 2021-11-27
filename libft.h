@@ -93,5 +93,6 @@ void	ft_free_str_array(char **array, int len);
 void	ft_list_push_front(t_list **list, t_list *new);
 void	ft_list_push_back(t_list *list, t_list *new);
 int		ft_iswhitespace(char c);
+int		ft_lstsize(t_list *list);
 
 #endif
