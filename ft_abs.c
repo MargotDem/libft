@@ -16,4 +16,3 @@ int	ft_abs(int i)
 		i = -i;
 	return (i);
 }
-//efjwoihkjbv
