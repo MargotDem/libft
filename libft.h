@@ -53,6 +53,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 // bonus
+
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
@@ -79,6 +80,7 @@ char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 
 // super bonus
+
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -87,6 +89,7 @@ void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 
 // own funktions
+
 int		ft_ismatch(const char *haystack, const char *needle, int i);
 void	ft_display_list_str(t_list *list);
 void	ft_free_str_array(char **array, int len);
@@ -94,5 +97,23 @@ void	ft_lstadd_back(t_list *list, t_list *new);
 int		ft_iswhitespace(char c);
 int		ft_lstsize(t_list *list);
 int		ft_abs(int i);
+
+// btrees
+
+typedef struct	s_btree
+{
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
+}				t_btree;
+
+t_btree	*btree_create_node(void *item);
+void	btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void	btree_apply_infix(t_btree *root, void (*applyf)(void *));
+void	btree_apply_suffix(t_btree *root, void (*applyf)(void *));
+t_btree		*btree_insert_data(t_btree **root, void *item, \
+			int (*cmpf)(void *, void *));
+t_btree *btree_find_node(t_btree *btree, int (*f)(void \
+	*cur_node_item, void *looked_for_item), void *item);
 
 #endif

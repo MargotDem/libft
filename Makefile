@@ -19,7 +19,9 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_lstadd.c ft_display_list_str.c ft_lstiter.c ft_lstmap.c \
 	ft_lstdelone.c ft_lstdel.c ft_free_str_array.c \
 	ft_lstadd_back.c ft_iswhitespace.c \
-	ft_lstsize.c ft_abs.c
+	ft_lstsize.c ft_abs.c btree_create_node.c btree_apply_prefix.c \
+	btree_apply_infix.c btree_apply_suffix.c btree_insert_data.c \
+	btree_find_node.c
 
 
 O_FILES = $(FILES:.c=.o)
