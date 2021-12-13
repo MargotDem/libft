@@ -9,7 +9,7 @@ t_btree *btree_find_node(t_btree *btree, int (*f)(void *cur_node_item, void *loo
         found_node = btree_find_node(btree->left, f, item);
         if (found_node)
             return (found_node);
-        if (f(btree->item, item))
+        if (f(btree->item, item) == 0)
         {
             found_node = btree;
             return (found_node);
