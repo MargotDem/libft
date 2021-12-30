@@ -100,7 +100,7 @@ int		ft_abs(int i);
 
 // btrees
 
-typedef struct	s_btree
+typedef struct s_btree
 {
 	struct s_btree	*left;
 	struct s_btree	*right;
@@ -111,9 +111,9 @@ t_btree	*btree_create_node(void *item);
 void	btree_apply_prefix(t_btree *root, void (*applyf)(void *));
 void	btree_apply_infix(t_btree *root, void (*applyf)(void *));
 void	btree_apply_suffix(t_btree *root, void (*applyf)(void *));
-t_btree		*btree_insert_data(t_btree **root, void *item, \
+t_btree	*btree_insert_data(t_btree **root, void *item, \
 			int (*cmpf)(void *, void *));
-t_btree *btree_find_node(t_btree *btree, int (*f)(void \
+t_btree	*btree_find_node(t_btree *btree, int (*f)(void \
 	*cur_node_item, void *looked_for_item), void *item);
 
 #endif
