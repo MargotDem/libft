@@ -22,7 +22,7 @@ FILES = ft_strlen.c ft_putchar.c ft_putstr.c ft_strcmp.c \
 	ft_lstsize.c ft_abs.c btree_create_node.c btree_apply_prefix.c \
 	btree_apply_infix.c btree_apply_suffix.c btree_insert_data.c \
 	btree_find_node.c get_next_line.c ft_sqrt.c ft_itoa_base.c \
-	ft_uitoa_base.c ft_l_itoa.c
+	ft_uitoa_base.c ft_l_itoa.c ft_ll_itoa.c
 
 O_FILES = $(FILES:.c=.o)
 

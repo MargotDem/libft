@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mde-maul <mde-maul@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/15 17:48:08 by mde-maul          #+#    #+#             */
+/*   Updated: 2022/03/15 17:48:10 by mde-maul         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_uitoa_base(unsigned int nb, int base)
 {
 	char			*nb_str;
 	unsigned int	tmp;
-    int				nb_size;
+	int				nb_size;
 
 	tmp = nb;
 	nb_size = 0;
