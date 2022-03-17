@@ -27,7 +27,7 @@ static int	get_size(long long int n, int negative)
 	return (size);
 }
 
-static int	get_abs_value(long int n)
+static int	get_abs_value(long long int n)
 {
 	if (n >= 0)
 		return (n);
