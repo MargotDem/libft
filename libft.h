@@ -91,8 +91,7 @@ int		ft_abs(int i);
 int		get_next_line(const int fd, char **line);
 int		ft_sqrt(int nb);
 char	*ft_itoa_base(int nb, int base);
-char	*ft_uitoa_base(unsigned int nb, int base);
-char	*ft_l_itoa(long int n);
+char	*ft_ull_itoa_base(unsigned long long int nb, int base);
 char	*ft_ll_itoa(long long int n);
 
 # define BUFF_SIZE 200

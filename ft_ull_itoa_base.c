@@ -12,29 +12,50 @@
 
 #include "libft.h"
 
-char	*ft_uitoa_base(unsigned int nb, int base)
+static int	get_size(unsigned long long int nb, int base)
 {
-	char			*nb_str;
-	unsigned int	tmp;
-	int				nb_size;
+	int		nb_size;
 
-	tmp = nb;
 	nb_size = 0;
-	while (tmp)
+	while (nb)
 	{
-		tmp = tmp / (unsigned int)base;
+		nb = nb / base;
 		nb_size++;
 	}
-	nb_str = ft_strnew(nb_size);
-	while (nb > 0)
+	return (nb_size);
+}
+
+static void	make_string(char *str, int nb_size, unsigned long long int nb, \
+	int base)
+{
+	unsigned long long int	tmp;
+	int						i;
+
+	i = 0;
+	while (i < nb_size)
 	{
 		tmp = nb % base;
-		nb_size--;
 		if (tmp <= 9)
-			nb_str[nb_size] = 48 + tmp;
+			str[nb_size - i - 1] = '0' + tmp;
 		else
-			nb_str[nb_size] = 87 + tmp;
+			str[nb_size - i - 1] = 'a' - 10 + tmp;
 		nb = nb / base;
+		i++;
 	}
+	str[nb_size] = '\0';
+}
+
+char	*ft_ull_itoa_base(unsigned long long int nb, int base)
+{
+	char	*nb_str;
+	int		nb_size;
+
+	nb_size = get_size(nb, base);
+	if (nb == 0)
+		nb_size = 1;
+	nb_str = ft_strnew(nb_size);
+	if (!nb_str)
+		return (NULL);
+	make_string(nb_str, nb_size, nb, base);
 	return (nb_str);
 }
